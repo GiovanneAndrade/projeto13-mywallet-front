@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Lexend Deca', sans-serif;
+  text-decoration: none;
 }
 #root{
   display: flex;
@@ -23,6 +24,11 @@ input{
   border-radius: 5px;
   border: none;
 }
+::-webkit-input-placeholder  { 
+  padding: 14px;
+  font-size: 20px;;
+  color: #000000;
+ }
 button{
   width: 326px;
   height: 46px;
@@ -44,4 +50,29 @@ p{
   width: 350px;
   height: 850px;
 }
+a{
+  color: #FFFFFF;
+}
+h2{
+  font-size: 26px;
+  color: #FFFFFF;
+}
+.titulo{
+  width: 326px;
+  text-align: left;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  color: #FFFFFF;
+  font-size: 26px;
+}
+.mar {
+  margin-bottom: 500px;
+}
+.icon{
+  width: 21px;
+  height: 21px;
+  color: #FFFFFF;
+}
+ 
  

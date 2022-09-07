@@ -1,22 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Container, H1} from '../app/Global'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate()
+  const [email, setEmail] = useState('')
+  const [senha, setSenha] = useState('')
+
+  const logim = {
+    email: email,
+    senha: senha,
+  }
+  function handleForm (e){
+    e.preventDefault();
+    navigate("/Adicionar")
+  }
  return (
    <Container >
       <H1>MyWallet</H1>
-      <form>
-        <input type="text"  placeholder='E-mail'/>
-        <input type="text"  placeholder='Senha'/>
-        <button>
-         <Link to={"/Adicionar"}>
-           Enviar
-         </Link> 
-        </button>
+      <form onSubmit={handleForm}>
+        <input type="email" required  placeholder='E-mail' onChange={(e)=> setEmail(e.target.value)}/>
+        <input type="password" required  placeholder='Senha' onChange={(e)=> setSenha(e.target.value)}/>
+        <button type='submit'> Enviar  </button>
       </form>
       <Link to={"/Cadastro"}>
-      <p>Primeira vez? Cadastre-se!</p>
+       <p>Primeira vez? Cadastre-se!</p>
       </Link>
    </Container>
  )

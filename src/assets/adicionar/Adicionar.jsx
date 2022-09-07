@@ -1,21 +1,35 @@
 import React from 'react'
-import {Container, H1, Ent, Base, Dados, P} from '../app/Global'
+import { Container, Ent, Base, Dados, P } from '../app/Global'
 import { Link } from "react-router-dom";
-
+import { MdOutlineRemoveCircleOutline, MdAddCircleOutline } from 'react-icons/md'
+import { RiLogoutBoxRLine } from 'react-icons/ri'
 
 export const Adicionar = () => {
+
+  
   return (
     <Container>
-      <H1>Ola, Fulano</H1>
+      <div className='titulo'>
+      <h2>Ola, Fulano</h2>
+        <RiLogoutBoxRLine/>
+      </div>
       <Dados>
         <P>Não há registros de <br /> entrada ou saída</P>
       </Dados>
-     <Link to={"/Entrada"}>
       <Base>
-        <Ent><p>nova entrada</p></Ent>
-        <Ent><p>nova entrada</p></Ent>
+        <Link to={"/Entrada"}>
+          <Ent>
+            < MdAddCircleOutline className="icon"/>
+            <p>nova entrada</p>
+          </Ent>
+        </Link>
+        <Link to={"/Saida"}>
+          <Ent>
+            <MdOutlineRemoveCircleOutline className="icon"/>
+            <p>nova saida</p>
+          </Ent>
+        </Link>
       </Base>
-      </Link>
     </Container>
   )
 }

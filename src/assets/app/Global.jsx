@@ -11,10 +11,9 @@ export const Container = Styled.div`
   justify-content: center;
 `
 export const H1 = Styled.h1`
-  color: rgb(251, 0, 255);
   font-size: 32px;
   color: #FFFFFF;
-  margin-bottom:13px;
+  margin: 40px;
 `
 export const Ent = Styled.div`
   width: 155px;
@@ -23,8 +22,9 @@ export const Ent = Styled.div`
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  text-align: left;
+  padding: 17px;
 `
 
 export const Base = Styled.div`
