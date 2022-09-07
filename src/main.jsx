@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import  Caminhos  from './assets/routes/App'
+import  Caminhos  from './assets/app/App'
 
 import './index.css'
 
