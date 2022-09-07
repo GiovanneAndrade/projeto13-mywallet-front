@@ -37,15 +37,39 @@ export const Dados = Styled.div`
   height: 446px;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background: #FFFFFF;
   border-radius: 5px;
   margin-bottom: 20px;
+  padding:12px;
 `
 export const P = Styled.p`
   font-size: 20px;
   color: #868686;
   text-align: center;
 `
+export const Ul = Styled.ul`
+  width: 100%;
+  display: flex;
+  align-items: center;
+`
+export const Li = Styled.li`
+  list-style-type: none;
+  font-size: 16px;
+  margin:7px;
+  
+`
+export const LiDia = Styled(Li)`
+  color: #C6C6C6;
+`
+export const LiValorDesc = Styled(Li)`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+   
+`
+
+
+
+
 
 

@@ -1,11 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import  Caminhos  from './assets/app/App'
-
+import  App  from './assets/app/App'
+import { AuthProvider } from './providers/auth'
 import './index.css'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Caminhos />
+    <AuthProvider>
+      <App/>
+    </AuthProvider>
   </React.StrictMode>
 )
