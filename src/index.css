@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400&family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&family=Saira+Stencil+One&display=swap');
 *{
   padding:0 ;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-decoration: none;
 }
 #root{
@@ -38,12 +38,14 @@ button{
   color: #FFFFFF;
   border: none;
   cursor: pointer;
+  font-weight: 700;
   }
 p{
   margin-top: 32px;
   font-size: 15px;
   color: #FFFFFF;
   cursor: pointer;
+  font-weight: 700;
 }
 .ola{
   background-color: #A328D6;

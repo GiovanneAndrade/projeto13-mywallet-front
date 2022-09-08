@@ -14,6 +14,7 @@ export const H1 = Styled.h1`
   font-size: 32px;
   color: #FFFFFF;
   margin: 40px;
+  font-family: 'Saira Stencil One';
 `
 export const Ent = Styled.div`
   width: 155px;
