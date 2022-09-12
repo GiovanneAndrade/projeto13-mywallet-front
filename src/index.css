@@ -80,13 +80,19 @@ h2{
   color: #FFFFFF;
 }
 .saldo{
+  position: -webkit-sticky;  
+  position: sticky;
+  bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-right: 13px;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
 }
 .sal{
+
   color: #000000;
   display: flex;
   align-items: center;
