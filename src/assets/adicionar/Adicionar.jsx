@@ -9,22 +9,16 @@ import axios from "axios";
 export const Adicionar = () => {
   const { token, nome, email } = React.useContext(AuthContext)
   const [entradasSaidas, setEntradasSaidas] = useState([])
-
- 
- 
-
    const somanteSaidas = entradasSaidas.filter((i) => {
     if (i.tipo === "saida"){
     return i
     }
   })
-  
   const total = somanteSaidas.reduce(getTotal, 0);
   function getTotal(total, item) {
     return Number(total) + Number(item.valor) ;
   }
  
-   
   const somanteEntradas = entradasSaidas.filter((i) => {
     if (i.tipo === "entrada"){
       return i
@@ -36,7 +30,6 @@ export const Adicionar = () => {
   }
   
    const saldo = total + totalPar
-   
      const config = {
       headers: {
       authorization: `Bearer${token}`,
@@ -47,18 +40,14 @@ export const Adicionar = () => {
    
     useEffect(()=>{
       axios.get('http://localhost:5000/entradaEsaida', config)
-      .then((res) =>{
-         
+      .then((res) =>{   
         setEntradasSaidas(res.data)
       })
       .catch((err) =>{
-        
-        
       })
     },[token])
 
   return (
-    
     <Container>
       <div className='titulo'>
         <h2>Ola, {nome}</h2>
@@ -71,16 +60,14 @@ export const Adicionar = () => {
                 <LiDia>{item.dia}</LiDia>
                 <LiValorDesc>
                   <Li>{item.descricao}</Li>
-                  <Li style={{ color: item.tipo == "saida" ? "red" : "#03AC00" }}  >{item.valor}</Li> 
-                   
-                </LiValorDesc>
-               
+                  <Li style={{ color: item.tipo == "saida" ? "red" : "#03AC00" }}  >{item.valor}</Li>                   
+                </LiValorDesc>       
               </Ul>
                 
         ) }
          <div className="saldo">
         <p className="sal">Saldo</p>
-            {saldo} 
+            {saldo}  
           </div>
       </Dados>
       <Base>
