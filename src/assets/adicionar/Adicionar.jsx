@@ -65,7 +65,7 @@ export const Adicionar = () => {
               </Ul>
                 
         ) }
-         <div className="saldo">
+         <div className="saldo" style={{ color: saldo < 0 ? "red" : "#03AC00" }}>
         <p className="sal">Saldo</p>
             {saldo}  
           </div>
