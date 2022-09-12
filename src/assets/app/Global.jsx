@@ -42,6 +42,8 @@ export const Dados = Styled.div`
   border-radius: 5px;
   margin-bottom: 20px;
   padding:12px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 `
 export const P = Styled.p`
   font-size: 20px;

@@ -29,7 +29,7 @@ export const Adicionar = () => {
     return Number(totalPar) + Number(item.valor) ;
   }
   
-   const saldo = total + totalPar
+   const saldo =  totalPar - total
      const config = {
       headers: {
       authorization: `Bearer${token}`,
