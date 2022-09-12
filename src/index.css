@@ -77,5 +77,19 @@ h2{
   height: 21px;
   color: #FFFFFF;
 }
+.saldo{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 13px;
+}
+.sal{
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+}
  
  

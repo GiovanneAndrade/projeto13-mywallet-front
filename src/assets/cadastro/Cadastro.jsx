@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import {Container, H1} from '../app/Global'
 
@@ -17,6 +18,13 @@ export const Cadastro = () => {
   function handleForm (e){
     e.preventDefault();
     navigate("/")
+    axios.post('http://localhost:5000/cadastro', cadastro)
+  .then((res) =>{
+    alert('Sucesso')
+  })
+  .catch((err) =>{
+    alert('Erro ao Cadastrar')
+  })
   }
   return (
         <Container >
