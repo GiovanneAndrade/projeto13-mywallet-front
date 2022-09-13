@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import {Container, H1} from '../app/Global'
-
+import Swal from 'sweetalert2'
 export const Cadastro = () => {
   const navigate = useNavigate()
   const [nome, setNome] = useState('')
@@ -20,10 +20,20 @@ export const Cadastro = () => {
     navigate("/")
     axios.post('http://localhost:5000/cadastro', cadastro)
   .then((res) =>{
-    alert('Sucesso')
+    Swal.fire({
+      title: 'sucesso!',
+      text: 'cadastro Feito com Suceso',
+      icon: 'success',
+      confirmButtonText: 'Cool'
+    })
   })
   .catch((err) =>{
-    alert('Erro ao Cadastrar')
+    Swal.fire({
+      title: 'Error!',
+      text: 'Erro ao Cadastrar ',
+      icon: 'error',
+      confirmButtonText: 'Cool'
+    })
   })
   }
   return (

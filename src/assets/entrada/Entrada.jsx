@@ -3,6 +3,7 @@ import {Container} from '../app/Global'
 import {  useNavigate } from "react-router-dom";
 import { AuthContext } from '../../providers/auth';
 import axios from "axios";
+import Swal from 'sweetalert2'
 
 export const Entrada = () => {
   const { token, nome, email } = React.useContext(AuthContext)
@@ -25,10 +26,20 @@ export const Entrada = () => {
     navigate("/Adicionar")
     axios.post('http://localhost:5000/entrada', entrada, config)
     .then((res) =>{
-      alert('Sucesso')
+      Swal.fire({
+        title: 'sucesso!',
+        text: 'Entrada cadastrada com Suceso',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
     })
     .catch((err) =>{
-      alert('Erro ao Cadastrar Saída')
+      Swal.fire({
+        title: 'Error!',
+        text: 'Erro ao Cadastrar Entrada! Mínimo 4 Dígitos',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      })
     })
   }
   return (

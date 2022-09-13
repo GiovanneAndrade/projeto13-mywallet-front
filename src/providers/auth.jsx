@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { LoginUser } from '../servidores/server';
 import axios from "axios";
 export const AuthContext = React.createContext({})
-
+import Swal from 'sweetalert2'
 
 export const AuthProvider = (props) => {
   const entradas = [
@@ -24,7 +24,12 @@ export const AuthProvider = (props) => {
        setEmail(res.data.email) 
     })
     .catch((err) =>{
-      alert('usuario ou senha não Cadastrado')
+      Swal.fire({
+        title: 'Error!',
+        text: 'usuario ou senha não Cadastrado',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      })
       
     })
   }
